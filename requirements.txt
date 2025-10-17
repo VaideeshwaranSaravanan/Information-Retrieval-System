@@ -1,6 +1,9 @@
 python-dotenv
 google-generativeai
 langchain
+google-genai
+langchain-google-genai
+langchain-community
 PyPDF2
 faiss-cpu
 streamlit
