@@ -1,5 +1,6 @@
 import os
 from PyPDF2 import PdfReader
+from youtube_transcript_api import YouTubeTranscriptApi
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_google_genai import ChatGoogleGenerativeAI
@@ -21,6 +22,29 @@ def get_pdf_text(pdf_docs):
         for page in pdf_reader.pages:
             text+=page.extract_text()
     return text
+
+def get_youtube_transcript(video_urls):
+    # Extract the video ID from the URL
+    full_transcript = ""
+    if not video_urls or video_urls == " ":
+        return full_transcript
+    
+    video_url_list = video_urls.split('|')
+
+    for video_url in video_url_list:    
+        video_id = video_url.split("v=")[1].split("&")[0]
+        ytt_api = YouTubeTranscriptApi()
+
+        # Fetch the transcript
+        transcript_list = ytt_api.fetch(video_id)
+            
+        #print(transcript_list)
+    # Concatenate the text from each segment
+
+        full_transcript_temp = " ".join([segment.text for segment in transcript_list])
+        full_transcript += full_transcript_temp
+    return full_transcript
+
 
 def get_text_chunks(text):
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=20)

@@ -8,10 +8,12 @@ logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 list_of_files = [
     "src/__init__.py",
     "src/helper.py",
+    "pages/1_PDF_chatbot.py",
+    "pages/2_YouTube_chatbot.py",
     ".env",
     "requirements.txt",
     "setup.py",
-    "app.py",
+    "Home.py",
     "research/trials.ipynb"
 ]
 

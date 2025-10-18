@@ -1,5 +1,5 @@
 import streamlit as st
-from src.helper import get_pdf_text, get_text_chunks, get_vector_store, get_conversational_chain
+from src.helper import get_pdf_text, get_youtube_transcript, get_text_chunks, get_vector_store, get_conversational_chain
 
 
 def user_input(user_question):
@@ -13,21 +13,15 @@ def user_input(user_question):
 
 def main():
     st.set_page_config("Information Retrieval")
-    st.header("Information Retrieval System")
-
-    user_question = st.text_input("Ask a Question from PDF files")
-
+    st.title("PDF Chatbot")
     if "conversation" not in st.session_state:
         st.session_state.conversation = None
     if "chatHistory" not in st.session_state:
         st.session_state.chatHistory = None
     
-    if user_question:
-        user_input(user_question)
-
-    with st.sidebar:
-        st.title("Menu:")
-        pdf_docs = st.file_uploader("Upload your PDF files and click submit & process button", accept_multiple_files=True)
+    with st.container(border=True):
+        pdf_docs = st.file_uploader("Upload your PDF files here", accept_multiple_files=True)
+        st.write("Click submit & process button once entered")
         if st.button("Submit & Process"):
             with st.spinner("Processing..."):
                 raw_text = get_pdf_text(pdf_docs)
@@ -35,6 +29,11 @@ def main():
                 vector_store = get_vector_store(text_chunks)
                 st.session_state.conversation = get_conversational_chain(vector_store)
                 st.success("Done")
+
+    user_question = st.text_input("Ask a Question from PDF files")
+    if user_question:
+        user_input(user_question)
+    
 
 
 if __name__ == "__main__":
