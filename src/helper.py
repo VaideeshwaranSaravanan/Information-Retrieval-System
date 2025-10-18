@@ -31,7 +31,9 @@ def get_youtube_transcript(video_urls):
     
     video_url_list = video_urls.split('|')
 
-    for video_url in video_url_list:    
+    for video_url in video_url_list:
+        if not video_url or video_url == " ":
+            continue  
         video_id = video_url.split("v=")[1].split("&")[0]
         ytt_api = YouTubeTranscriptApi()
 

@@ -4,7 +4,11 @@ from src.helper import get_pdf_text, get_youtube_transcript, get_text_chunks, ge
 def main():
     st.set_page_config("Information Retrieval")
     st.header("Information Retrieval System")
-    st.markdown("dsfdsfasd")
+    st.markdown(
+        """dsfasdasd  
+        asdasdasd
+        asdasdasd
+""")
 
 
 if __name__ == "__main__":

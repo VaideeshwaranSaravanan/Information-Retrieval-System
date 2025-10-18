@@ -3,21 +3,17 @@ from src.helper import get_pdf_text, get_youtube_transcript, get_text_chunks, ge
 
 
 def user_input(user_question):
-    response = st.session_state.conversation({'question':user_question})
-    st.session_state.chatHistory = response['chat_history']
-    for i, message in enumerate(st.session_state.chatHistory):
-        if i%2==0:
-            st.write("User:", message.content)
-        else:
-            st.write("Reply:", message.content)
+    response = st.session_state.conversation_0({'question':user_question})
+    st.session_state.chatHistory_0 = response['chat_history']
+    
 
 def main():
     st.set_page_config("Information Retrieval")
     st.title("PDF Chatbot")
-    if "conversation" not in st.session_state:
-        st.session_state.conversation = None
-    if "chatHistory" not in st.session_state:
-        st.session_state.chatHistory = None
+    if "conversation_0" not in st.session_state:
+        st.session_state.conversation_0 = None
+    if "chatHistory_0" not in st.session_state:
+        st.session_state.chatHistory_0 = None
     
     with st.container(border=True):
         pdf_docs = st.file_uploader("Upload your PDF files here", accept_multiple_files=True)
@@ -27,13 +23,19 @@ def main():
                 raw_text = get_pdf_text(pdf_docs)
                 text_chunks = get_text_chunks(raw_text)
                 vector_store = get_vector_store(text_chunks)
-                st.session_state.conversation = get_conversational_chain(vector_store)
+                st.session_state.conversation_0 = get_conversational_chain(vector_store)
                 st.success("Done")
 
-    user_question = st.text_input("Ask a Question from PDF files")
+    user_question = st.chat_input("Ask a Question from PDF files")
     if user_question:
         user_input(user_question)
-    
+
+    if st.session_state.chatHistory_0:
+        for i, message in enumerate(st.session_state.chatHistory_0):
+            if i%2==0:
+                st.write("User:", message.content)
+            else:
+                st.write("Reply:", message.content)
 
 
 if __name__ == "__main__":
