@@ -12,12 +12,12 @@ Welcome to the **Information Retrieval System**, an interactive tool that lets y
 
 You can chat with uploaded PDFs or YouTube videos to quickly find answers, summaries, or explanations - no more endless scrolling or manual searching.  
 
-### 💬 **How to Use**
+### **How to Use**
 1. **Choose a Chatbot** - Select an option from the sidebar (PDF or YouTube).  
 2. **Upload or Paste a Link** - Upload a PDF file or enter a YouTube video link.  
 3. **Start Chatting** - Ask any question, and the chatbot will instantly retrieve and summarize the relevant information for you.  
 
-### 🤖 **Available Chatbots**
+### **Available Chatbots**
 - **📄 PDF Chatbot** - Chat with documents like research papers, reports, or study materials.  
 - **🎥 YouTube Chatbot** - Interact with YouTube videos (only English for now) through simple questions and get key insights instantly.  
 
