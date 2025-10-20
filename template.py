@@ -14,11 +14,18 @@ list_of_files = [
     "requirements.txt",
     "setup.py",
     "Home.py",
+    "Results/",
     "research/trials.ipynb"
 ]
 
 for filepath in list_of_files:
     filepath = Path(filepath)
+
+    if str(filepath).endswith("/"):
+        os.makedirs(filepath, exist_ok=True)
+        logging.info(f"Creating empty directory: {filepath}")
+        continue
+
     filedir, filename = os.path.split(filepath)
 
     if filedir !="":
