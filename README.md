@@ -59,10 +59,10 @@ Powered by **Google Gemini** and **LangChain**, this project brings conversation
 
 ## Credits & Acknowledgment
 
-This project was **inspired by a YouTube tutorial** demonstrating a basic PDF chatbot using **Streamlit**, **LangChain**, and **Google PaLM**.  
+This project was **inspired by a [YouTube tutorial](https://www.youtube.com/watch?v=X193V1CSZZE)** demonstrating a basic PDF chatbot using **Streamlit**, **LangChain**, and **Google PaLM**.  
 
-### Enhancements here
-- Added **YouTube Chatbot** functionality.  
+### Enhancements:
+- Added **YouTube Chatbot** and improvised **PDF Chatbot** functionality.  
 - Integrated **Google Gemini** for superior response quality.  
 - Upgraded **Streamlit UI** with sidebar navigation and better design.  
 - Improved overall retrieval flow and efficiency.  
