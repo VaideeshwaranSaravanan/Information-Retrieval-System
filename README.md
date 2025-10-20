@@ -2,7 +2,7 @@
 ### *Ask. Search. Learn Smarter.*  
 ---
 
-An interactive **information retrieval platform** built with **Streamlit**, designed to help users **chat directly with their content** — whether it’s a PDF document or a YouTube video.  
+An interactive **information retrieval platform** built with **Streamlit**, designed to help users **chat directly with their content** - whether it’s a PDF document or a YouTube video.  
 Powered by **Google Gemini** and **LangChain**, this project brings conversational intelligence to your study materials, lectures, and online resources.
 
 ---
@@ -38,6 +38,8 @@ Powered by **Google Gemini** and **LangChain**, this project brings conversation
 5. **Access the Interface**
    ```bash
    Open http://localhost:8501 in your browser.
+
+---
 
 ## How It Works
 
