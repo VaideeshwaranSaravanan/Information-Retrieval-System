@@ -19,7 +19,7 @@ Powered by **Google Gemini** and **LangChain**, this project brings conversation
 ## How to Use
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/information-retrieval-system.git
+   git clone https://github.com/VaideeshwaranSaravanan/Information-Retrieval-System.git
    cd information-retrieval-system
 
 2. **Install Dependencies**
