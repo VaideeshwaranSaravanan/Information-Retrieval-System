@@ -1,6 +1,3 @@
-# Information-Retrieval-System
-Bot to retrieve information from the resources.
-
 # Information Retrieval System  
 ### *Ask. Search. Learn Smarter.*  
 ---
@@ -16,19 +13,6 @@ Powered by **Google Gemini** and **LangChain**, this project brings conversation
 - **Conversational Interface** – Clean, intuitive Streamlit design for smooth interaction.  
 - **Google Gemini Integration** – Smarter, more accurate, and context-aware responses.  
 - **LangChain-powered Retrieval** – For intelligent text splitting, embedding, and vector search.  
-
----
-
-## Tech Stack
-| Component | Technology |
-|------------|-------------|
-| **Frontend** | Streamlit |
-| **Backend** | Python |
-| **LLM Model** | Google Gemini |
-| **Framework** | LangChain |
-| **Vector Store** | FAISS / Chroma |
-| **APIs** | YouTube Transcript API |
-| **Environment** | Conda / Virtualenv |
 
 ---
 
@@ -57,7 +41,7 @@ Powered by **Google Gemini** and **LangChain**, this project brings conversation
 
 ## How It Works
 
-1. The system loads and preprocesses text from PDFs or YouTube transcripts.  
+1. The system loads and preprocesses text from resources.  
 2. **LangChain** splits text into smaller chunks and embeds them using a vector store.  
 3. When you ask a question, the system retrieves the most relevant chunks using **similarity search**.  
 4. **Google Gemini** generates a conversational, context-rich answer in real time.  
@@ -77,7 +61,7 @@ Powered by **Google Gemini** and **LangChain**, this project brings conversation
 
 This project was **inspired by a YouTube tutorial** demonstrating a basic PDF chatbot using **Streamlit**, **LangChain**, and **Google PaLM**.  
 
-### Enhancements by *Vaideeshwaran Saravanan*
+### Enhancements here
 - Added **YouTube Chatbot** functionality.  
 - Integrated **Google Gemini** for superior response quality.  
 - Upgraded **Streamlit UI** with sidebar navigation and better design.  
