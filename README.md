@@ -22,20 +22,26 @@ Powered by **Google Gemini** and **LangChain**, this project brings conversation
    git clone https://github.com/VaideeshwaranSaravanan/Information-Retrieval-System.git
    cd information-retrieval-system
 
-2. **Install Dependencies**
+2. **Create a virtual environment (optional but recommended)**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate        # For macOS/Linux
+    venv\Scripts\activate           # For Windows
+
+3. **Install Dependencies**
    ```bash
    pip install -r requirements.txt
 
-3. **Set up your environment variables**
+4. **Set up your environment variables**
     Create a .env file and add your Gemini API key:
    ```bash
    GOOGLE_API_KEY = your_api_key_here
 
-4. **Run the Streamlit App**
+5. **Run the Streamlit App**
    ```bash
    streamlit run Home.py
 
-5. **Access the Interface**
+6. **Access the Interface**
 
    Open http://localhost:8501 in your browser.
 
