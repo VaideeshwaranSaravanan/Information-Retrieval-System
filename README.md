@@ -36,7 +36,7 @@ Powered by **Google Gemini** and **LangChain**, this project brings conversation
    streamlit run Home.py
 
 5. **Access the Interface**
-   ```bash
+
    Open http://localhost:8501 in your browser.
 
 ---
