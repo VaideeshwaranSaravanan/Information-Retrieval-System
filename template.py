@@ -2,7 +2,6 @@ import os
 from pathlib import Path
 import logging
 
-
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 
 list_of_files = [
@@ -17,13 +16,12 @@ list_of_files = [
     "Results/",
     "research/trials.ipynb"
 ]
+for filepath1 in list_of_files: 
+    filepath = Path(filepath1) 
 
-for filepath in list_of_files:
-    filepath = Path(filepath)
-
-    if str(filepath).endswith("/"):
-        os.makedirs(filepath, exist_ok=True)
-        logging.info(f"Creating empty directory: {filepath}")
+    if str(filepath1).endswith("/"): 
+        os.makedirs(filepath, exist_ok=True) 
+        logging.info(f"Creating empty directory: {filepath1}") 
         continue
 
     filedir, filename = os.path.split(filepath)
